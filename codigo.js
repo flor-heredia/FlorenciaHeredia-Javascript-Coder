@@ -3,7 +3,7 @@
 
 function dtoCamisetas() {
     alert(
-        `Llevando cualquiera de nuestras camisetas podes obtener estos descuentos:
+        `¡Bienvenido, Gracias por elegirnos. Llevando cualquiera de nuestras camisetas podes obtener los siguientes descuentos +
       \nA-Si adquirís Camisetas Oficiales 20% de Descuento
       \nB-Si adquirís Camisetas Suplentes 30% de Descuento
       \nC-Si adquirís Camisetas de Entrenamientos 40% de Descuento`
@@ -60,6 +60,9 @@ function dtoCamisetas() {
                 alert("El dato ingresado es Incorrecto, vuelva a ingresar la opcion correspondiente.");
         }
     }
+
 }
+
+
 
 dtoCamisetas();
