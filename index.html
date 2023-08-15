@@ -3,18 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/44553591-logo-tienda-de-deporte-equipo-de-deporte-venta-de-productos-para-el-deporte.jpg" type="image/x-icon">
 
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <title>Tienda Deportiva</title>
 </head>
 <body>
-    <main>
+        <header class="header__container">
+            <div class="header__logo__titulo">
+                <img src="./img/44553591-logo-tienda-de-deporte-equipo-de-deporte-venta-de-productos-para-el-deporte.jpg" alt="Logo Sport">
+                <p>Tienda Deportiva</p>
+            </div>
+            <div class="header__carrito__icono">
+                <p id="carritoLogo" class="carrito__logo">🛒</p>
+            </div>
+            
+        </header>
 
-    </main>
+<main>
 
+<article>
+    <div class="contenedor__main">
+        <div class="contenedor__main__banner">
+            <h1>Tienda Deportiva</h1>
+            <p>Tu lugar para comprar tu ropa deportiva</p>
+        </div>
+        <div id="contenedorProductos" class="contenedor__main__productos">
+        </div>
+    </div>
+</article>
 
-    
-<!-- ES LA MEJOR FORMA DE ESCRIBIR EL CODIGO -->
-    <script src="./codigo.js"></script>
+<div id="modalContainer" class="modal__container-disable"></div>
+
+</main>
+<!-- Codigo JS -->
+<script src="./js/producto.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/carrito.js"></script>
+
 
 </body>
 </html>
