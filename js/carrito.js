@@ -92,7 +92,7 @@ const pintarCarrito = () => {
         showConfirmButton: true,
         showDenyButton: true,
         icon: "question",
-        text: "¿Desea vacias su carrito?",
+        text: "¿Desea vaciar su carrito?",
         position: "top-right",
       }).then((result) => {
         if (result.isConfirmed) {
