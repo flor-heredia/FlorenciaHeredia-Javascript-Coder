@@ -1,0 +1,23 @@
+[
+  {"id":1,"nombre":"Camiseta Argentina Blanca","precio":15000,"type":"Camiseta","defaultType":"all","cantidad":1,"img": "IMG/argentina/5989c9f3f19d4-446247-500x500.jpg"},
+  {"id":2,"nombre":"Camiseta Argentina Celeste","precio":13500,"type":"Camiseta","defaultType":"all","cantidad":1,"img": "IMG/argentina/camiseta argentina.jpg"},
+  {"id":3,"nombre":"Camiseta Argentina Blanca","precio":14500,"type":"Camiseta","defaultType":"all","cantidad":1,"img": "IMG/argentina/camiseta-blanca-21-67495972042d35b07216702766464851-640-0.jpg"},
+  {"id":4,"nombre":"Camiseta Estados Unidos Azul","precio":15700,"type":"Camiseta","defaultType":"all","cantidad":1,"img": "IMG/estadosunidos/25a575f0ac6f0d7d8edd8b989ab70fa8.jpg"},
+  {"id":5,"nombre":"Camiseta Estados Unidos Blanco","precio":16300,"type":"Camiseta","defaultType":"all","cantidad":1,"img": "IMG/estadosunidos/carmelo_anthony_jersey_usa_blanco.jpg"},
+  {"id":6,"nombre":"Camiseta Estados Unidos Azul","precio":15900,"type":"Camiseta","defaultType":"all","cantidad":1,"img": "IMG/estadosunidos/WC-USAB-REPLICA-J-651696_452_A.jpg"},
+  {"id":7,"nombre":"Pelota Spalding","precio":12500,"type":"Pelota","defaultType":"all","cantidad":1,"img": "IMG/pelotas/D_NQ_NP_852042-MLA44381121309_122020-O.webp"},
+  {"id":8,"nombre":"Pelota Wilson","precio":11500,"type":"Pelota","defaultType":"all","cantidad":1,"img": "IMG/pelotas/D_NQ_NP_866628-MLA48592050356_122021-O.webp"},
+  {"id":9,"nombre":"Pelota Molten","precio":13400,"type":"Pelota","defaultType":"all","cantidad":1,"img": "IMG/pelotas/pelota molten.webp"},
+  {"id":10,"nombre":"Short Argentina Blanco","precio":12750,"type":"Short","defaultType":"all","cantidad":1,"img": "IMG/shortarg/1-1.png"},
+  {"id":11,"nombre":"Short Argentina Azul","precio":12800,"type":"Short","defaultType":"all","cantidad":1,"img": "IMG/shortarg/NI_AV3843-419-1.jpeg"},
+  {"id":12,"nombre":"Short Argentina Celeste y Blanco","precio":16800,"type":"Short","defaultType":"all","cantidad":1,"img": "IMG/shortarg/short-de-basquet-de-argentina-nike-jordan-limited-celeste-510020cq0191448-1.jpg"},
+  {"id":13,"nombre":"Short Estados Unidos","precio":12800,"type":"Short","defaultType":"all","cantidad":1,"img": "IMG/shorteeuu/img-20220617-wa00371-2572bb9898d6a0060716559519325099-640-0.png"},
+  {"id":14,"nombre":"Short Estados Unidos","precio":19800,"type":"Short","defaultType":"all","cantidad":1,"img": "IMG/shorteeuu/short-basket-nike-wc-team-usa-exterieur-bleu-651710-453.jpg"},
+  {"id":15,"nombre":"Short Estados Unidos","precio":17350,"type":"Short","defaultType":"all","cantidad":1,"img": "IMG/shorteeuu/short-basket-nike-wc-team-usa-domicile-blanc-651710-100.jpg"},
+  {"id":16,"nombre":"Zapatillass Jordan","precio":22750,"type":"Zapatillas","defaultType":"all","cantidad":1,"img": "IMG/zapatillasjordan/air-jordan-xxxii-ceo-016-22.jpg"},
+  {"id":17,"nombre":"Zapatillas Jordan","precio":29500,"type":"Zapatillas","defaultType":"all","cantidad":1,"img": "IMG/zapatillasjordan/images.jpeg"},
+  {"id":18,"nombre":"Zapatillas Jordan","precio":31000,"type":"Zapatillas","defaultType":"all","cantidad":1,"img": "IMG/zapatillasjordan/zapatillas-botitas-air-jordan-xxxiii-se-cd9560-106-51-aac0c3f6edfe1dff0f16321749286354-480-0.jpg"},
+  {"id":19,"nombre":"Zapatillas Koby","precio":32100,"type":"Zapatillas","defaultType":"all","cantidad":1,"img": "IMG/zapatillaskoby/2_nike-kobe-6-protro-mambacita.webp"},
+  {"id":20,"nombre":"Zapatillas Koby","precio":29700,"type":"Zapatillas","defaultType":"all","cantidad":1,"img": "IMG/zapatillaskoby/images (1).jpeg"},
+  {"id":21,"nombre":"Zapatillas Koby","precio":2,"type":"Zapatillas","defaultType":"all","cantidad":1,"img": "IMG/zapatillaskoby/zapas_zapatillas_nike_kobe_6_proto_green_apple_2020.png"}
+]

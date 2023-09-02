@@ -1,47 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/44553591-logo-tienda-de-deporte-equipo-de-deporte-venta-de-productos-para-el-deporte.jpg" type="image/x-icon">
+  <title>Tienda Deportiva</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./IMG/44553591-logo-tienda-de-deporte-equipo-de-deporte-venta-de-productos-para-el-deporte.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="./css/estilos.css">
-
-    <title>Tienda Deportiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
 </head>
+
 <body>
-        <header class="header__container">
-            <div class="header__logo__titulo">
-                <img src="./img/44553591-logo-tienda-de-deporte-equipo-de-deporte-venta-de-productos-para-el-deporte.jpg" alt="Logo Sport">
-                <p>Tienda Deportiva</p>
-            </div>
-            <div class="header__carrito__icono">
-                <p id="carritoLogo" class="carrito__logo">🛒</p>
-            </div>
-            
-        </header>
-
-<main>
-
-<article>
-    <div class="contenedor__main">
-        <div class="contenedor__main__banner">
-            <h1>Tienda Deportiva</h1>
-            <p>Tu lugar para comprar tu ropa deportiva</p>
-        </div>
-        <div id="contenedorProductos" class="contenedor__main__productos">
-        </div>
+  <!-- * HEADER -->
+  <header class="header">
+    <div class="header__contenedor">
+      <div class="header__titulo__logo">
+        <a href="#" class="header__link__main"><img src="./IMG/44553591-logo-tienda-de-deporte-equipo-de-deporte-venta-de-productos-para-el-deporte.jpg" alt="" class="header__logo"></a>
+        <p class="header__titulo">Tienda Deportiva</p>
+      </div>
     </div>
-</article>
 
-<div id="modalContainer" class="modal__container-disable"></div>
+    <!--*CARRITO-->
+    <div class="carro__contenedor">
+      <div id="carro" class="carro__contenedor__logo">
+        <i class="fa-solid fa-cart-shopping fa-2xl" style="color: white; "><span id="cantidadCarrito"
+            class="cantidad__carrito"></span></i>
+      </div>
+    </div>
+    
+    <!--*Contenido del Modal-->
+    <div id="modal-contenedor" class="modal__contenedor__productos-disable"></div>
+  </header>
 
-</main>
-<!-- Codigo JS -->
-<script src="./js/producto.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/carrito.js"></script>
+  <main class="main">
+    <!--*BANNER-->
+    <div class="banner">
+      <div class="banner__contenedor">
+        <h1 class="banner__contenedor_titulo">Tienda Deportiva</h1>
+        <p class="banner__contenedor__subtitulo">"Compra tu ropa de Basquet en el mejor lugar."</p>
+      </div>
+    </div>
 
+    <!--*LA TIENDA-->
+    
+    <div class="tienda__productos__contenedor">
+      <div class="filter__contenedor">
+        <div class="filter__contenedor__caja">
+          <h3 class="filter__contenedor__ul__titulo">Productos</h3>
+          <ul class="filter__contenedor__ul" id="filterContainer">
+            <li class="filter__contenedor__ul__filters" name="filtro" id="todos">Todos</li>
+            <li class="filter__contenedor__ul__filters" name="filtro" id="Camiseta">Camisetas</li>
+            <li class="filter__contenedor__ul__filters" name="filtro" id="Pelota">Pelotas</li>
+            <li class="filter__contenedor__ul__filters" name="filtro" id="Short">Short</li>
+            <li class="filter__contenedor__ul__filters" name="filtro" id="Zapatillas">Zapatillas</li>
+          </ul>
+        </div>
+      </div>
+      <div id="productos-tienda" class="productos__tienda"></div>
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+
+  </footer>
+  <!--* <script src="./JS/products.js"></script> -->
+  <script src="./JS/app.js"></script>
+  <script src="./JS/carrito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
+
 </html>

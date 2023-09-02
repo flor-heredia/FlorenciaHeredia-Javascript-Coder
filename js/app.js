@@ -1,60 +1,136 @@
-const contenedorProductos = document.getElementById("contenedorProductos")
-const carritoLogo = document.getElementById("carritoLogo")
-const modalContainer = document.getElementById("modalContainer")
+//Llamo al carrito icono del carrrito de compras y su contenedor
+const shopContent = document.getElementById("productos-tienda");
+const verCarrito = document.getElementById("carro");
+const modalContenedor = document.getElementById("modal-contenedor");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-let carrito = JSON.parse(localStorage.getItem("carrito")) || []
+//*variables para filtrar productos
+const filterContainer = document.getElementById("filterContainer");
+const filtros = document.getElementsByName("filtro");
+let productos = [];
 
-// para que los productos aparezcan en la pagina
+document.addEventListener("DOMContentLoaded", () => {
+  fetchData();
+});
 
-function productosBasquet () {
-  // *RECORRE EL ARRAY EL FOREACH , "PRODUCT" HACE REFERENCIA A CADA OBJETO DEL ARRAY
-  producto.forEach ((product)=>{
-    let contenido = document.createElement("div")
-    contenido.className = "card__contenido"
-    contenido.innerHTML = `
+//*CARRITO
+//*Al iniciar toma el local storage o el carrito vacio
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+//*Implementando fetch con archivo Json local
+
+const fetchData = async () => {
+  try {
+    const res = await fetch("./JS/products.json");
+    const data = await res.json();
+    productos = data;
+    todoLosProductos(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//*Funcion para mostrar todos los productos dinamicamente
+function todoLosProductos(productos) {
+  productos.forEach((product) => {
+    let content = document.createElement("div");
+    content.className = "card";
+    content.innerHTML = `
     <img src="${product.img}">
-    <h3 class= "producto__nombre">${product.nombre}</h3>
-    <p class= "producto__precio">$${product.precio}</p>
-    `
-    // *Append es para enviar lo que necesite (enviar una cosa a la otra)"ES UN METODO"
+    <h3>${product.nombre}</h3>
+    <p class= "precio">$${product.precio}</p>
+    `;
 
-    contenedorProductos.append(contenido)
+    //*Agrego el content de los productos al div principal
+    shopContent.append(content);
 
-    // *Creacion de btn comprar
-    let btnComprar = document.createElement("button")
-    btnComprar.className = "btn__comprar"
-    btnComprar.innerText = "Comprar"
+    //*creo la variable para el boton y lo llamo
+    let buttonComprar = document.createElement("button");
+    buttonComprar.className = "button-comprar";
+    buttonComprar.innerText = "Comprar";
 
-  // * Poner el boton dentro de la card.
+    content.append(buttonComprar);
 
-    contenido.append(btnComprar)
-    btnComprar.addEventListener("click", ()=>{
-      const productoRepetido = carrito.some((repetido)=> repetido.id === product.id
-      )
-      if(productoRepetido){
-        carrito.map((producto)=>{
-          if(producto.id === product.id){
-            producto.cantidad++
+    //*Sistema para agregar productos por cantidad
+    buttonComprar.addEventListener("click", () => {
+      const repetido = carrito.some(
+        (repeatProduct) => repeatProduct.id === product.id
+      );
+
+      if (repetido) {
+        carrito.map((prod) => {
+          if (prod.id === product.id) {
+            prod.cantidad++;
           }
-        })
-      }else{
+        });
+      } else {
         carrito.push({
           id: product.id,
-          img:product.img,
-          nombre:product.nombre,
-          precio:product.precio,
-          cantidad:product.cantidad,
-        })
-        guardarLocal()
+          img: product.img,
+          nombre: product.nombre,
+          precio: product.precio,
+          cantidad: product.cantidad,
+        });
       }
-
-    })
-  })
-
+      carritoCounter();
+      saveLocal();
+      toastAction();
+    });
+  });
 }
 
-const guardarLocal = ()=>{
-  localStorage.setItem("carrito", JSON.stringify(carrito))
+//*Metodos para filtrar productos
+//*Utilizo el bubbling del (event) para el container, asi todos sus hijos lo reciben.
+let productoFiltradoDefault = "";
+
+filterContainer.addEventListener("click", (e) => {
+  if (e.target.matches("li")) {
+    let productoFiltrado = e.target.id;
+
+    if (productoFiltrado !== productoFiltradoDefault) {
+      productoFiltradoDefault = productoFiltrado;
+
+      if (productoFiltrado === "todos") {
+        shopContent.innerHTML = "";
+        todoLosProductos(productos);
+        carritoCounter();
+        saveLocal();
+      } else {
+        filtrarProductos(productoFiltrado);
+        carritoCounter();
+        saveLocal();
+      }
+    }
+  }
+});
+
+//*Funcion para filtrar los productos por (type)
+
+function filtrarProductos(type) {
+  shopContent.innerHTML = "";
+  const productType = productos.filter((product) => product.type === type);
+  todoLosProductos(productType);
 }
 
-productosBasquet()
+//*Local storage Set Item
+const saveLocal = () => {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+};
+
+const toastAction = async () => {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "bottom-right",
+    iconColor: "white",
+    customClass: {
+      popup: "colored-toast",
+    },
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+  });
+  await Toast.fire({
+    icon: "success",
+    title: "Se ha añadido un producto al carrito",
+  });
+};
