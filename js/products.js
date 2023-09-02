@@ -1,3 +1,5 @@
+
+// * SE CREAN LOS OBJETOS PARA REPRESENTAR LOS PRODCUTOS EN LA PAGINA WEB, DANDOLE LA PROPIEDAD A CADA OBJETO, PARA MOSTRAR LA INFORMACION
 class Productos {
   constructor(id, nombre, precio, type, cantidad, img) {
     this.id = id;
@@ -10,6 +12,7 @@ class Productos {
   }
 }
 
+// * SE DECLARAN TODOS LOS PRODCUTOS, ATRAVEZ DE UN ARRAY 
 const producto = [
   new Productos (1,"Camiseta Argentina Blanca",15000,"Camiseta","IMG/argentina/5989c9f3f19d4-446247-500x500.jpg",1),
   new Productos (2,"Camiseta Argentina Celeste",13500,"Camiseta","IMG/argentina/camiseta argentina.jpg",1),
